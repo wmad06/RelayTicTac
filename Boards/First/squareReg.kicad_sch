@@ -1,0 +1,180 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "61c739e1-e179-42ba-b57c-5ff6e8a3d27e")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 57.658 59.436)
+		(size 33.782 19.812)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2a8c52d7-08cf-4ade-a1cc-3384a4b9c799")
+		(property "Sheetname" "bit0"
+			(at 57.658 58.7244 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "1BitReg.kicad_sch"
+			(at 57.658 79.8326 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "R" input
+			(at 57.658 73.66 180)
+			(uuid "2f7edf8a-428b-4fbe-af54-a5d1c89c6b2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q-\\" output
+			(at 91.44 73.66 0)
+			(uuid "bd7c5c24-b7a3-4805-9d6e-6be633ea5c38")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q" output
+			(at 91.44 64.77 0)
+			(uuid "301b0097-580a-4349-8448-7a51bd499525")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S" input
+			(at 57.658 64.77 180)
+			(uuid "3c16368e-0465-4d05-88a8-9c7f57abbc77")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "First"
+				(path "/2f97b768-7bc2-4493-b1b3-a52ed6b783e1/3933a054-16ea-43e6-b90d-abb4dad78580"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 58.42 91.44)
+		(size 33.782 19.812)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8f27cdd0-69e5-4bdb-b969-d1b5a577d0cc")
+		(property "Sheetname" "bit1"
+			(at 58.42 90.7284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "1BitReg.kicad_sch"
+			(at 58.42 111.8366 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "R" input
+			(at 58.42 105.664 180)
+			(uuid "fea79b7f-75fe-4b2c-a3fb-e7115b064d80")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q-\\" output
+			(at 92.202 105.664 0)
+			(uuid "ba596c55-29ff-4570-ab07-0e905d89f3b1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q" output
+			(at 92.202 96.774 0)
+			(uuid "9f06844b-d7d7-41b1-8f0d-da466c04fa10")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S" input
+			(at 58.42 96.774 180)
+			(uuid "51cfa66c-19ab-4602-9169-69507fb369e5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "First"
+				(path "/2f97b768-7bc2-4493-b1b3-a52ed6b783e1/3933a054-16ea-43e6-b90d-abb4dad78580"
+					(page "7")
+				)
+			)
+		)
+	)
+)
