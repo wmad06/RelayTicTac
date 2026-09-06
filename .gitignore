@@ -1,0 +1,38 @@
+# KiCad temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*-cache*
+*-bak
+*-bak*
+*~
+~*
+_autosave-*
+#auto_saved_files#
+*.tmp
+
+# KiCad lock files
+~*.lck
+
+# KiCad local project settings
+*.kicad_prl
+
+# Footprint cache
+fp-info-cache
+
+# Netlists
+*.net
+
+# Autorouter files
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv
+
+# KiCad local Git history
+.history
