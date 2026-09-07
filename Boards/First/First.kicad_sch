@@ -4265,7 +4265,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 228.6 64.77 90)
+		(at 228.6 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4276,7 +4276,7 @@
 		(fields_autoplaced yes)
 		(uuid "2748b7e8-f98d-4223-a53a-0971c92b3668")
 		(property "Reference" "#PWR096"
-			(at 234.95 64.77 0)
+			(at 228.6 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4287,14 +4287,14 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 232.41 64.7699 90)
+			(at 231.14 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
