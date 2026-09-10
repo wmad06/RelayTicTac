@@ -39,3 +39,5 @@ fp-info-cache
 
 # blender cache
 *.blend1
+*.png
+*.PNG
