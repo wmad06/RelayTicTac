@@ -39,5 +39,9 @@ fp-info-cache
 
 # blender cache
 *.blend1
+
+# rendered files
 *.png
 *.PNG
+*.mp4
+*.MP4
