@@ -526,7 +526,7 @@
       "netlist": "",
       "plot": "gerbers/",
       "specctra_dsn": "",
-      "step": "../../renders/First.step",
+      "step": "../../../../RelayTicTacSyncFolder/steps/lemon.pdf",
       "vrml": ""
     },
     "page_layout_descr_file": ""
