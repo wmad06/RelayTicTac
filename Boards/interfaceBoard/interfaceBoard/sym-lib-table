@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "InterfaceBoard_Symbols") (type "KiCad") (uri "${KIPRJMOD}/InterfaceBoard_Symbols.kicad_sym") (options "") (descr ""))
+	(lib (name "InterfaceBoard_Lib") (type "KiCad") (uri "${KIPRJMOD}/InterfaceBoard_Lib.kicad_sym") (options "") (descr ""))
+)
