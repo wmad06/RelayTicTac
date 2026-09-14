@@ -654,11 +654,26 @@
     "reuse_designators": true,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
-    "top_level_sheets": [],
-    "used_designators": "",
+    "top_level_sheets": [
+      {
+        "filename": "interfaceBoard.kicad_sch",
+        "name": "interfaceBoard",
+        "uuid": "235e1922-7e9c-45bb-adad-cde682cd8f35"
+      }
+    ],
+    "used_designators": "R1-2,J1,D1-2,#PWR1-8,U1",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "235e1922-7e9c-45bb-adad-cde682cd8f35",
+      "interfaceBoard"
+    ],
+    [
+      "77d02ec9-3a75-4d1d-a617-b76cab30d36e",
+      "output"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
