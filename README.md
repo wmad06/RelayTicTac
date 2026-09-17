@@ -1,5 +1,6 @@
 # RelayTicTac
 Relay logic Tic Tac Toe computer
+bitfoot is coming!
 POTATO!
 LEMON!
 
