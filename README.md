@@ -9,3 +9,4 @@ potato + lemon = sour potato
 sour + sweet = 0
 sour potato + candy = potato
 egg salad
+This is a good use of the read me file
