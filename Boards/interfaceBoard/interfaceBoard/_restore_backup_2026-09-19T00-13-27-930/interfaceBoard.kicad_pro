@@ -661,7 +661,7 @@
         "uuid": "235e1922-7e9c-45bb-adad-cde682cd8f35"
       }
     ],
-    "used_designators": "R1-18,J1-3,D1-2,#PWR1-18,U1,F1",
+    "used_designators": "R1-2,J1,D1-2,#PWR1-8,U1",
     "variants": []
   },
   "sheets": [
@@ -680,34 +680,6 @@
     [
       "f600713a-eb12-4417-bcbc-099826e7a920",
       "vDiv0"
-    ],
-    [
-      "c9e65fe1-72d2-417d-b569-56794a4a34db",
-      "vDiv1"
-    ],
-    [
-      "0e70fbea-df1f-40d5-8a9f-a8aeb92a63d9",
-      "vDiv2"
-    ],
-    [
-      "9c6e752b-8a5e-4435-ac5b-cf1805c04048",
-      "vDiv3"
-    ],
-    [
-      "e36cd6bc-4702-467a-af00-63bcfc7a9ddd",
-      "vDiv4"
-    ],
-    [
-      "485e97f7-feef-42c0-8711-dadf8eb0c680",
-      "vDiv5"
-    ],
-    [
-      "0ad89b50-1901-4881-8807-c9fe6e09f78f",
-      "vDiv6"
-    ],
-    [
-      "c519d024-ac96-467a-abe5-7c146aa5c1c2",
-      "vDiv7"
     ]
   ],
   "text_variables": {},

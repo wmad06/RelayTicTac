@@ -1085,6 +1085,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:VCC"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VCC"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VCC_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VCC_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Index on output from shift reg and input to power controll swapped as this better matches the pinout of the actual ICs\n"
 		(exclude_from_sim no)
@@ -1095,16 +1234,6 @@
 			)
 		)
 		(uuid "fbea7c27-ab9a-47a1-877d-3be8f6494e38")
-	)
-	(wire
-		(pts
-			(xy 78.74 83.82) (xy 80.01 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "182a4c36-81a2-4c4f-890d-96101743c2e9")
 	)
 	(label "QD"
 		(at 100.33 82.55 0)
@@ -1362,32 +1491,8 @@
 			)
 		)
 	)
-	(global_label "5V+"
-		(shape input)
-		(at 78.74 83.82 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "80959f9a-0201-47c1-9558-f1bf7c3dea8a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.8843 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(hierarchical_label "O3"
-		(shape output)
+		(shape input)
 		(at 153.67 87.63 0)
 		(effects
 			(font
@@ -1398,7 +1503,7 @@
 		(uuid "09838ac7-9f46-40b0-a7e7-bf5d1272f95a")
 	)
 	(hierarchical_label "O1"
-		(shape output)
+		(shape input)
 		(at 153.67 92.71 0)
 		(effects
 			(font
@@ -1409,7 +1514,7 @@
 		(uuid "14588d65-ff59-4f87-a23d-53f54bce8957")
 	)
 	(hierarchical_label "O4"
-		(shape output)
+		(shape input)
 		(at 153.67 85.09 0)
 		(effects
 			(font
@@ -1420,7 +1525,7 @@
 		(uuid "168ce5d0-8a45-4250-88ce-a2e96081c1c0")
 	)
 	(hierarchical_label "O5"
-		(shape output)
+		(shape input)
 		(at 153.67 82.55 0)
 		(effects
 			(font
@@ -1431,7 +1536,7 @@
 		(uuid "28a7f7e6-98f3-4db0-a25b-305f80b0eef3")
 	)
 	(hierarchical_label "O6"
-		(shape output)
+		(shape input)
 		(at 153.67 80.01 0)
 		(effects
 			(font
@@ -1442,7 +1547,7 @@
 		(uuid "8a0a64cc-5057-4695-8423-e4673bb447ef")
 	)
 	(hierarchical_label "QH'"
-		(shape output)
+		(shape input)
 		(at 100.33 97.79 0)
 		(effects
 			(font
@@ -1452,7 +1557,7 @@
 		)
 		(uuid "8a16b271-992f-449c-b1eb-e0cc05e57394")
 	)
-	(hierarchical_label "SerIn"
+	(hierarchical_label "MOSI"
 		(shape input)
 		(at 80.01 74.93 180)
 		(effects
@@ -1464,7 +1569,7 @@
 		(uuid "b8711561-9d0c-4cfc-b7b6-91666727edd0")
 	)
 	(hierarchical_label "O2"
-		(shape output)
+		(shape input)
 		(at 153.67 90.17 0)
 		(effects
 			(font
@@ -1475,7 +1580,7 @@
 		(uuid "c8679467-7741-434e-877d-7e5fc219eeee")
 	)
 	(hierarchical_label "O8"
-		(shape output)
+		(shape input)
 		(at 153.67 74.93 0)
 		(effects
 			(font
@@ -1486,7 +1591,7 @@
 		(uuid "de4ea3a5-91cc-4a80-b553-b3ac4dec7a7b")
 	)
 	(hierarchical_label "O7"
-		(shape output)
+		(shape input)
 		(at 153.67 77.47 0)
 		(effects
 			(font
@@ -1687,7 +1792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-18_W7.62mm_Socket"
+		(property "Footprint" ""
 			(at 143.51 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -1778,6 +1883,85 @@
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35/77d02ec9-3a75-4d1d-a617-b76cab30d36e"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 80.01 82.55 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77f718ba-815d-4f17-b1dd-dec801081a95")
+		(property "Reference" "#PWR08"
+			(at 83.82 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 76.2 82.5499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 80.01 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "211a1644-de6e-459b-aa29-e89d85e423bb")
+		)
+		(instances
+			(project "interfaceBoard"
+				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35/77d02ec9-3a75-4d1d-a617-b76cab30d36e"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -1895,7 +2079,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
+		(property "Footprint" ""
 			(at 90.17 85.09 0)
 			(hide yes)
 			(show_name no)
