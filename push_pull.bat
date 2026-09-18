@@ -9,6 +9,7 @@ if errorlevel 1 (
 
 set "evil=false"
 set "invalid=false"
+
 :menu
 cls
 set "choice="
