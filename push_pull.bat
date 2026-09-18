@@ -84,6 +84,8 @@ goto pull_push
 
 :pull_push
 if "%evil%"=="true" (
+    echo Locking screen and pull pushing in 5s...
+    timeout /t 5
     rundll32.exe user32.dll,LockWorkStation
 )
 echo Pulling latest changes from remote...
