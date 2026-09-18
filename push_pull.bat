@@ -103,10 +103,10 @@ if errorlevel 1 (
     goto menu
 )
 echo FINISHED
-timeout /t 60
 if "%evil%"=="true" (
     shutdown /s /t 300
 )
+timeout /t 60
 goto menu
 
 :end
