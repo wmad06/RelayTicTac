@@ -2,6 +2,7 @@
 Relay logic Tic Tac Toe computer
 bitfoot is coming!
 POTATO!
+I like to eat
 LEMON!
 
 potato + lemon = sour potato
