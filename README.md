@@ -5,3 +5,5 @@ POTATO!
 LEMON!
 
 potato + lemon = sour potato
+sour + sweet = 0
+sour potato + candy = potato
