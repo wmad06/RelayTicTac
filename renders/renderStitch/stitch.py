@@ -100,21 +100,36 @@ def main():
     suffixes_for_names = []
     filteredImages = []
 
+    # if she works she works
+    image_dict = {}
     for image in images:
         name, suffix = get_camera_suffix_and_name(image)
-        if not name in names:
-            names.append(name)
-            filteredImages.append([[image]])
-            nameIndex = names.index(name)
-            suffixes_for_names.append([suffix])
-        else:
-            nameIndex = names.index(name)
-            if not suffix in suffixes_for_names[nameIndex]:
-                suffixes_for_names[nameIndex].append(suffix)
-                filteredImages[nameIndex].append([image])
-            else:
-                suffixIndex = suffixes_for_names[nameIndex].index(suffix)
-                filteredImages[nameIndex][suffixIndex].append(image)
+            
+        # beautiful dict code
+        image_dict.setdefault(name,{})
+        image_dict[name].setdefault(suffix,[])
+        image_dict[name][suffix].append(image)
+
+        # optional silly sausage conversion
+        names = list(image_dict)
+        suffixes_for_names = [list(image_dict[name]) for name in names]
+        filteredImages = [list(name_dict.values()) for name_dict in image_dict.values()]
+    
+    # for image in images:
+    #     name, suffix = get_camera_suffix_and_name(image)
+    #     if not name in names:
+    #         names.append(name)
+    #         filteredImages.append([[image]])
+    #         nameIndex = names.index(name)
+    #         suffixes_for_names.append([suffix])
+    #     else:
+    #         nameIndex = names.index(name)
+    #         if not suffix in suffixes_for_names[nameIndex]:
+    #             suffixes_for_names[nameIndex].append(suffix)
+    #             filteredImages[nameIndex].append([image])
+    #         else:
+    #             suffixIndex = suffixes_for_names[nameIndex].index(suffix)
+    #             filteredImages[nameIndex][suffixIndex].append(image)
                 
     for i in range(len(filteredImages)):
         if (names[i] == ""):
