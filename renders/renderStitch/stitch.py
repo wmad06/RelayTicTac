@@ -4,15 +4,49 @@ import re
 import tempfile
 import time
 from datetime import datetime
+import tkinter as tk
+from tkinter import filedialog
 
 # config variables
 DEFAULT_FPS = 60
-INPUT_FOLDER = Path(r"C:\Users\Will\Documents\.projects\RelayTicTac\test stitch\pngs\mega")
-OUTPUT_FOLDER = Path(r"C:\Users\Will\Documents\.projects\RelayTicTac\test stitch\vidout\megaOut")
-TIME_LOG_FILE = Path(r"C:\Users\Will\Documents\.projects\RelayTicTac\gitMonster\RelayTicTac\renders\renderStitch\time_log.txt")
+# manually select input and output folders
+MANUAL_ENTRY = False
+INPUT_FOLDER = Path(r"")
+OUTPUT_FOLDER = Path(r"")
+TIME_LOG_FILE = Path(__file__).parent / "time_log.txt"
 
 # end config variables
 # functions
+
+def select_folders(): # uses file explorer GUI to select input and output folders.
+    root = tk.Tk()
+    root.withdraw()
+
+    input_folder = filedialog.askopenfilename(
+        title = "select ONE .png file in the input folder",
+        initialdir=Path(__file__).parent,
+        filetypes=[("PNG image", "*.png")]
+    )
+    if not input_folder:
+        root.destroy()
+        return None, None
+    
+    input_folder = Path(input_folder).parent
+
+    
+
+    output_folder = filedialog.askdirectory(
+        title= "Select MP4 output folder",
+        initialdir=Path(__file__).parent
+    )
+
+    if not output_folder:
+        root.destroy()
+        return None, None
+    root.destroy()
+
+    return input_folder, Path(output_folder)
+
 def get_sort_key(path):
     return[
         int(part) if part.isdigit() else part.lower()
@@ -83,22 +117,35 @@ def get_camera_suffix_and_name(path):
 
 # end functions
 
+
+
 def main():
+    if not MANUAL_ENTRY:
+        input_folder, output_folder = select_folders()
+        if input_folder is None or output_folder is None:
+            print("Error: Folder selection cancel")
+            return
+    else:
+        input_folder = INPUT_FOLDER
+        output_folder = OUTPUT_FOLDER
+
     start_time = time.perf_counter()
     start_date_time = datetime.now()
+    videoCount = 0
+    stoppedByUser = False
 
-    if not INPUT_FOLDER.exists():
+    if not input_folder.exists():
         print("ERROR: Input folder does not exist.")
         return
 
-    images = get_png_files(INPUT_FOLDER)
+    images = get_png_files(input_folder)
     if not images:
         print("ERROR: no PNG files found.")
         return
 
-    names = []
-    suffixes_for_names = []
-    filteredImages = []
+    # names = []
+    # suffixes_for_names = []
+    # filteredImages = []
 
     # if she works she works
     image_dict = {}
@@ -111,9 +158,9 @@ def main():
         image_dict[name][suffix].append(image)
 
         # optional silly sausage conversion
-        names = list(image_dict)
-        suffixes_for_names = [list(image_dict[name]) for name in names]
-        filteredImages = [list(name_dict.values()) for name_dict in image_dict.values()]
+    names = list(image_dict)
+    suffixes_for_names = [list(image_dict[name]) for name in names]
+    filteredImages = [list(name_dict.values()) for name_dict in image_dict.values()]
     
     # for image in images:
     #     name, suffix = get_camera_suffix_and_name(image)
@@ -130,43 +177,68 @@ def main():
     #         else:
     #             suffixIndex = suffixes_for_names[nameIndex].index(suffix)
     #             filteredImages[nameIndex][suffixIndex].append(image)
-                
-    for i in range(len(filteredImages)):
-        if (names[i] == ""):
-            print("\nCreating video for empty name\n")
-        else: 
-            print("\nCreating video for name: ", names[i], "\n")
-        for j in range(len(filteredImages[i])):
-            if names[i] == "" and suffixes_for_names[i][j] == "":
-                outputFile = OUTPUT_FOLDER / f"bro, why didn't you name your outputs?.mp4"
-            elif names[i] == "":
-                outputFile = OUTPUT_FOLDER / f"{suffixes_for_names[i][j]}.mp4"
-            elif suffixes_for_names[i][j] == "":
-                outputFile = OUTPUT_FOLDER / f"{names[i]}.mp4"
+    currentName = ""
+    currentSuffix = ""
+    try:                
+        for i in range(len(filteredImages)):
+            currentName = names[i]
+            suffixCount = len(suffixes_for_names[i])
+            if (currentName == ""):
+                print(f"\nCreating videos for empty name. With {suffixCount} suffixes.\n")
+            else: 
+                print(f"\nCreating videos for name: {currentName}. With {suffixCount} suffixes.\n")
+            for j in range(len(filteredImages[i])):
+                currentSuffix = suffixes_for_names[i][j]
+                if currentName == "" and currentSuffix == "":
+                    outputFile = output_folder / f"Bro, why didn't you name your render outputs.mp4"
+                elif currentName == "":
+                    outputFile = output_folder / f"{currentSuffix}.mp4"
+                elif currentSuffix == "":
+                    outputFile = output_folder / f"{currentName}.mp4"
+                else:
+                    outputFile = output_folder / f"{currentName}_{currentSuffix}.mp4"
+                if (currentName == ""):
+                    if currentSuffix == "":
+                        print("\nCreating video for empty name, empty suffix\n")
+                    else:
+                        print("\nCreating video for empty name, suffix:", currentSuffix, "\n")
+                else:
+                    if currentSuffix == "":
+                        print("\nCreating video for name:", currentName, ", empty suffix\n")
+                    else:
+                        print("\nCreating video for name:", currentName, ", suffix:", currentSuffix, "\n")
+                make_video(filteredImages[i][j], outputFile,DEFAULT_FPS)
+                videoCount += 1
+                if (currentName == ""):
+                    if currentSuffix == "":
+                        print("\nFinished creating video for empty name, empty suffix\n")
+                    else:
+                        print("\nFinished creating video for empty name, suffix:", currentSuffix, "\n")
+                else:
+                    if currentSuffix == "":
+                        print("\nFinished creating video for name:", currentName, ", empty suffix\n")
+                    else:
+                        print("\nFinished creating video for name:", currentName, ", suffix:", currentSuffix, "\n")
+                print(f"Video count: {videoCount}")
+    except KeyboardInterrupt:
+        print("\nGeneration stopped by user!")
+        print(f"Total full videos completed successfully: {videoCount}")
+        print("!!!This may cause a partially stitched video!!!\nCheck log to find file that may be affected")
+        stoppedByUser = True
+    stopMessage = ""
+    if stoppedByUser:
+        if currentName == "":
+            if  currentSuffix == "":
+                stopMessage = f" | Generation stopped at empty name, empty suffix. This may cause a partially stitched video!"
             else:
-                outputFile = OUTPUT_FOLDER / f"{names[i]}_{suffixes_for_names[i][j]}.mp4"
-            if (names[i] == ""):
-                if suffixes_for_names[i][j] == "":
-                    print("\nCreating video for empty name, empty suffix\n")
-                else:
-                    print("\nCreating video for empty name, suffix:", suffixes_for_names[i][j], "\n")
+                stopMessage = f" | Generation stopped at empty name, suffix: {currentSuffix}. This may cause a partially stitched video!"
+        else:
+            if currentSuffix == "":
+                stopMessage = f" | Generation stopped at name: {currentName}, empty suffix. This may cause a partially stitched video!"
             else:
-                if suffixes_for_names[i][j] == "":
-                    print("\nCreating video for name:", names[i], ", empty suffix\n")
-                else:
-                    print("\nCreating video for name:", names[i], ", suffix:", suffixes_for_names[i][j], "\n")
-            make_video(filteredImages[i][j], outputFile,DEFAULT_FPS)
-            if (names[i] == ""):
-                if suffixes_for_names[i][j] == "":
-                    print("\nFinished creating video for empty name, empty suffix\n")
-                else:
-                    print("\nFinished creating video for empty name, suffix:", suffixes_for_names[i][j], "\n")
-            else:
-                if suffixes_for_names[i][j] == "":
-                    print("\nFinished creating video for name:", names[i], ", empty suffix\n")
-                else:
-                    print("\nFinished creating video for name:", names[i], ", suffix:", suffixes_for_names[i][j], "\n")
-            
+                stopMessage = f" | Generation stopped at name: {currentName}, suffix: {currentSuffix}. This may cause a partially stitched video!"
+
+    status = "STOPPED BY USER" if stoppedByUser else "COMPLETED"
     end_time = time.perf_counter()
     end_date_time = datetime.now()
 
@@ -180,11 +252,16 @@ def main():
     with open(TIME_LOG_FILE, "a",
               encoding = "utf-8") as file:
         file.write(
+            f"Status: {status} | "
+            f"Videos generated: {videoCount} | "
             f"Start: {start_date_time:%Y-%m-%d %H:%M:%S} | "
             f"End: {end_date_time:%Y-%m-%d %H:%M:%S} | "
-            f"{elapsedString}\n"
+            f"{elapsedString}"
+            f"{stopMessage}\n"
+
         )
-    print("ALL DONE!")
+    if not stoppedByUser:
+        print("ALL DONE!")
 
 
 if __name__ == "__main__":
