@@ -106,6 +106,7 @@ echo FINISHED
 if "%evil%"=="true" (
     shutdown /s /t 300
 )
+echo Waiting 60s then returning to menu...
 timeout /t 60
 goto menu
 
