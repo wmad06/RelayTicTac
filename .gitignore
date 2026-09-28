@@ -45,3 +45,7 @@ fp-info-cache
 *.PNG
 *.mp4
 *.MP4
+
+# Archive files
+*.7z
+*.zip
