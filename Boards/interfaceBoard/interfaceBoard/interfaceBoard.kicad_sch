@@ -6215,7 +6215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dbe4e93-aa03-4e81-bf0c-9b1748fbac8a")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR05"
 			(at 67.31 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6275,7 +6275,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR038")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -6452,7 +6452,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39693621-e119-4706-add0-4f32ee33a1b5")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR07"
 			(at 90.17 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -6512,7 +6512,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR08")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -6530,7 +6530,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4108f5f4-0ef0-42d2-a881-0509a9e8c06b")
-		(property "Reference" "J4"
+		(property "Reference" "J6"
 			(at 269.24 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6688,7 +6688,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "J4")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -7232,7 +7232,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94e84273-13c1-4817-b14c-ad3d085c0568")
-		(property "Reference" "J6"
+		(property "Reference" "J5"
 			(at 257.81 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7312,7 +7312,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -7330,7 +7330,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae6de08d-ee57-4d0f-9c03-b6cde14fd6ac")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR09"
 			(at 262.89 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7390,7 +7390,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR05")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -7490,7 +7490,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca1b17f6-8ad7-487e-9206-2a67e7679cd2")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR06"
 			(at 77.47 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7550,7 +7550,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR07")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7568,7 +7568,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf1c9902-070e-469b-9262-e056df6b0b28")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR08"
 			(at 251.46 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7628,7 +7628,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR09")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -7727,7 +7727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1b82efd-8e3a-4956-9d77-798365579305")
-		(property "Reference" "J5"
+		(property "Reference" "J4"
 			(at 83.82 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7885,7 +7885,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "J5")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -7903,7 +7903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7ef3bdb-1b2e-49c2-9827-26036ef4c9c5")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR010"
 			(at 275.59 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -7963,7 +7963,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(reference "#PWR06")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8447,7 +8447,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(page "4")
+					(page "7")
 				)
 			)
 		)
@@ -8885,7 +8885,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(page "12")
+					(page "4")
 				)
 			)
 		)
@@ -9031,7 +9031,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(page "13")
+					(page "5")
 				)
 			)
 		)
@@ -9177,7 +9177,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(page "5")
+					(page "9")
 				)
 			)
 		)
@@ -9469,7 +9469,7 @@
 		(instances
 			(project "interfaceBoard"
 				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35"
-					(page "7")
+					(page "8")
 				)
 			)
 		)

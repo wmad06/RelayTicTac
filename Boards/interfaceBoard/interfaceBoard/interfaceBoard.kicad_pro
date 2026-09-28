@@ -140,7 +140,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -678,28 +678,28 @@
       "MISO_sheet"
     ],
     [
-      "0a67c760-5d0c-4ab0-af6d-0b8dc2801250",
-      "MISO_sheet2"
-    ],
-    [
-      "b05a7146-4f58-4f2b-a2a0-5ebabd023900",
-      "MISO_sheet3"
-    ],
-    [
-      "956b83aa-6b45-4bdb-b113-5dac05dcacd7",
-      "MOSI_sheet2"
-    ],
-    [
-      "f338d8c0-0630-4373-94d0-b93dd07a9c0c",
-      "MOSI_sheet3"
-    ],
-    [
       "9c334558-612d-4fd6-a180-de24f73f76ee",
       "MOSI_sheet1"
     ],
     [
       "ace3e8c2-cc38-4069-a11b-1d2b6aa18c07",
       "MISO_sheet1"
+    ],
+    [
+      "956b83aa-6b45-4bdb-b113-5dac05dcacd7",
+      "MOSI_sheet2"
+    ],
+    [
+      "0a67c760-5d0c-4ab0-af6d-0b8dc2801250",
+      "MISO_sheet2"
+    ],
+    [
+      "f338d8c0-0630-4373-94d0-b93dd07a9c0c",
+      "MOSI_sheet3"
+    ],
+    [
+      "b05a7146-4f58-4f2b-a2a0-5ebabd023900",
+      "MISO_sheet3"
     ]
   ],
   "text_variables": {},
