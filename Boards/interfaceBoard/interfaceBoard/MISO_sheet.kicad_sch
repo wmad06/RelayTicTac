@@ -2868,4 +2868,50 @@
 			)
 		)
 	)
+	(sheet
+		(at 106.68 119.38)
+		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5ccf92fa-fa73-421c-bb07-e3ce7333f4a1")
+		(property "Sheetname" "voltageDivider"
+			(at 106.68 118.6684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "12v-4vVoltage_Divider.kicad_sch"
+			(at 106.68 123.7746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "interfaceBoard"
+				(path "/235e1922-7e9c-45bb-adad-cde682cd8f35/b56f998e-c99b-4141-ba0e-9bae5386b37e"
+					(page "10")
+				)
+			)
+		)
+	)
 )

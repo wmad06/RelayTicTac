@@ -678,36 +678,44 @@
       "MISO_sheet"
     ],
     [
-      "f600713a-eb12-4417-bcbc-099826e7a920",
-      "vDiv0"
+      "9c334558-612d-4fd6-a180-de24f73f76ee",
+      "MOSI_sheet1"
     ],
     [
-      "c9e65fe1-72d2-417d-b569-56794a4a34db",
-      "vDiv1"
+      "ace3e8c2-cc38-4069-a11b-1d2b6aa18c07",
+      "MISO_sheet1"
     ],
     [
-      "0e70fbea-df1f-40d5-8a9f-a8aeb92a63d9",
-      "vDiv2"
+      "956b83aa-6b45-4bdb-b113-5dac05dcacd7",
+      "MOSI_sheet2"
     ],
     [
-      "9c6e752b-8a5e-4435-ac5b-cf1805c04048",
-      "vDiv3"
+      "0a67c760-5d0c-4ab0-af6d-0b8dc2801250",
+      "MISO_sheet2"
     ],
     [
-      "e36cd6bc-4702-467a-af00-63bcfc7a9ddd",
-      "vDiv4"
+      "f338d8c0-0630-4373-94d0-b93dd07a9c0c",
+      "MOSI_sheet3"
     ],
     [
-      "485e97f7-feef-42c0-8711-dadf8eb0c680",
-      "vDiv5"
+      "b05a7146-4f58-4f2b-a2a0-5ebabd023900",
+      "MISO_sheet3"
     ],
     [
-      "0ad89b50-1901-4881-8807-c9fe6e09f78f",
-      "vDiv6"
+      "5ccf92fa-fa73-421c-bb07-e3ce7333f4a1",
+      "voltageDivider"
     ],
     [
-      "c519d024-ac96-467a-abe5-7c146aa5c1c2",
-      "vDiv7"
+      "5ccf92fa-fa73-421c-bb07-e3ce7333f4a1",
+      "voltageDivider"
+    ],
+    [
+      "5ccf92fa-fa73-421c-bb07-e3ce7333f4a1",
+      "voltageDivider"
+    ],
+    [
+      "5ccf92fa-fa73-421c-bb07-e3ce7333f4a1",
+      "voltageDivider"
     ]
   ],
   "text_variables": {},
